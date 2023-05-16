@@ -1,0 +1,269 @@
+// Utility classes
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.ml12 {
+  margin-left: 3 * $base-gap;
+}
+
+.h32 {
+  height: 32px;
+}
+.el-message-box__wrapper {
+  z-index: 3333 !important;
+}
+
+.row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.disabled {
+  // pointer-events: none; // TODO:  to be tested
+  cursor: not-allowed !important;
+  color: $disabled-color !important;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Update Element UI default style
+
+// Adding margin for iconfont icon
+.el-button {
+  .iconfont {
+    margin-right: $base-gap * 2;
+    font-size: 12px;
+  }
+}
+
+.el-table {
+  .caret-wrapper {
+    width: 11px;
+    margin-left: 1px;
+
+    .sort-caret {
+      left: 0px;
+    }
+  }
+}
+
+.ee-dialog {
+  border-radius: 12px;
+}
+
+.ee-tabs.el-tabs {
+  .el-tabs__header {
+    .el-tabs__nav-wrap {
+      &::after {
+        content: none;
+      }
+
+      .el-tabs__item {
+        &.is-focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+.el-select .el-input .el-select__caret {
+  transform: rotate(0deg);
+
+  &.is-reverse {
+    transform: rotate(180deg);
+  }
+}
+
+.el-pagination {
+  .el-input {
+    margin: 0 !important;
+    width: 84px;
+
+    .el-input__inner {
+      font-size: 12px;
+      height: 24px;
+      line-height: 24px;
+    }
+  }
+
+  .el-icon-arrow-right::before {
+    content: '\e791';
+    font-size: 8px;
+  }
+
+  .el-icon-arrow-left::before {
+    content: '\e792';
+  }
+
+  .el-icon-arrow-up::before {
+    content: '\e791';
+  }
+
+  .el-select__caret {
+    transform: rotate(0deg);
+  }
+
+  .is-reverse {
+    transform: rotate(180deg);
+  }
+
+  li {
+    height: 24px !important;
+    line-height: 22px;
+    // width: 24px !important;
+    min-width: 24px !important;
+    font-family: PingFangSC-Regular;
+    min-width: 24px;
+    background-color: rgba(245, 247, 249, 1) !important;
+    border: 1px solid rgba(228, 231, 237, 1) !important;
+    border-radius: 4px;
+    margin: 0 2px;
+  }
+
+  .btn-next {
+    height: 24px !important;
+    line-height: 24px;
+    width: 24px !important;
+    min-width: 24px !important;
+    background-color: rgba(245, 247, 249, 1) !important;
+    border: 1px solid rgba(228, 231, 237, 1) !important;
+    border-radius: 4px;
+    margin-right: 16px;
+    margin-top: 2px !important;
+  }
+
+  .btn-prev {
+    height: 24px !important;
+    line-height: 24px;
+    width: 24px !important;
+    min-width: 24px !important;
+    background-color: rgba(245, 247, 249, 1) !important;
+    border: 1px solid rgba(228, 231, 237, 1) !important;
+    border-radius: 4px;
+    margin-top: 2px !important;
+  }
+
+  .active {
+    background-color: rgba(245, 247, 249, 1) !important;
+    border: 1px solid rgba(21, 100, 255, 1) !important;
+    color: rgba(21, 100, 255, 1) !important;
+  }
+
+  .el-pagination__total {
+    font-size: 12px;
+    margin-right: 16px;
+  }
+
+  .el-pager {
+    margin-top: 2px;
+  }
+}
+
+.el-dropdown-menu {
+  margin-top: 0;
+  padding-bottom: 0;
+
+  .popper__arrow {
+    display: none;
+  }
+}
+
+.type-icon {
+  height: 16px;
+  width: 16px;
+}
+
+.ee-btn__hover:hover {
+  border-color: #1564ff !important;
+}
+
+.el-date-editor:hover .el-input__inner {
+  border-color: #1564ff !important;
+}
+
+.el-cascader .el-input--mini .el-input__inner {
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  padding: 0 8px;
+}
+
+.el-cascader:hover .el-input--mini .el-input__inner {
+  border-color: #1564ff !important;
+}
+
+// message 被盖住问题，临时解决方式
+.el-message {
+  z-index: 9999 !important;
+}
+
+.bottom-line {
+  position: relative;
+
+  &::after {
+    @include bottom-line($color-line);
+  }
+}
+
+.right-line {
+  position: relative;
+
+  &::after {
+    @include right-line($color-line);
+  }
+}
+
+// 滚动条样式
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 6px;
+
+  &:hover {
+    height: 8px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 2px;
+  background: #f0f2f5;
+
+  &:hover {
+    background: #f0f2f5;
+  }
+
+  &:active {
+    background: #f0f2f5;
+  }
+}
+
+*:hover {
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccd2db;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #ccd2db;
+
+  &:hover {
+    background-color: #ccd2db;
+  }
+
+  &:active {
+    background: #ccd2db;
+  }
+}

@@ -1,0 +1,11 @@
+.el-icon-arrow-up {
+  font-family: 'iconfont' !important;
+  font-size: 12px !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  color: rgb(168, 172, 179) !important;
+}
+
+.el-icon-arrow-up::before {
+  content: '\e64a2' !important;
+}

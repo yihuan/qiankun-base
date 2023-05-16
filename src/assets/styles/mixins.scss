@@ -1,0 +1,28 @@
+@mixin bottom-line($color) {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: $color;
+}
+
+@mixin right-line($color) {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background: $color;
+}
+
+// 根据行数添加省略号
+@mixin ellipsis-line($line) {
+  display: -webkit-box !important;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
