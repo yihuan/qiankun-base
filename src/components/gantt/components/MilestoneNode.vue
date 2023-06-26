@@ -26,7 +26,7 @@
         v-loading="detailLoading"
         :model="milestone"
         :rules="milestoneRules"
-        class="ee-form"
+        class="milestone-form"
         label-width="80px"
         label-position="left"
       >
@@ -137,7 +137,7 @@
       <el-form
         ref="updateRef"
         :model="updateForm"
-        class="ee-form"
+        class="milestone-form"
         size="mini"
         label-width="120px"
         label-position="left"

@@ -1,5 +1,5 @@
 <template>
-  <div class="ee-gantt">
+  <div class="base-gantt">
     <div
       id="ganttContainer"
       ref="ganttContainer"
@@ -316,8 +316,8 @@ const defaultConfig = {
         ]
       },
       {
-        html: "<div id='ee-gantt-date-car'></div>",
-        css: 'ee-gantt-date-car',
+        html: "<div id='base-gantt-date-car'></div>",
+        css: 'base-gantt-date-car',
         width: 1
       },
       {
@@ -1457,7 +1457,7 @@ $new-task-height: 50px;
                 > .gantt_marker_area
                 > .gantt_links_area
  */
-.ee-gantt {
+.base-gantt {
   position: relative;
   // height: 100%;
 
@@ -1692,7 +1692,7 @@ $new-task-height: 50px;
         }
       }
 
-      .ee-gantt-date-car {
+      .base-gantt-date-car {
         position: absolute;
         z-index: 999;
         border: none;

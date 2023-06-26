@@ -4,7 +4,7 @@
       :value="date"
       placement="bottom-start"
       type="date"
-      class="ee-date-picker"
+      class="gantt-date-picker"
       placeholder="选择日期"
       :clearable="false"
       @input="dateChange"
@@ -50,7 +50,7 @@ export default {
     height: 24px !important;
     line-height: 24px !important;
   }
-  .ee-date-picker {
+  .gantt-date-picker {
     .el-input {
       width: 100% !important;
       height: 24px !important;

@@ -25,7 +25,6 @@
     "core-js": "^3.8.3",
     "dayjs": "^1.11.5",
     "dhtmlx-gantt": "^7.1.12",
-    "ee-component": "^0.1.6",
     "element-ui": "^2.15.10",
     "lodash": "^4.17.21",
     "pinia": "^2.0.14",

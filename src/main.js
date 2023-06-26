@@ -4,7 +4,6 @@ import VueRouter from 'vue-router'
 import { createPinia, PiniaVuePlugin } from 'pinia'
 import { registerMicroApps } from 'qiankun'
 import { info } from '@/utils/log.util'
-import EeComponent from 'ee-component'
 
 import router from './router'
 import microApps from '@/utils/micro-app.util'
@@ -34,7 +33,6 @@ window.MainVue.config.errorHandler = function (err, vm, info) {
 }
 
 window.MainVue.use(ElementUI)
-window.MainVue.use(EeComponent)
 window.MainVue.use(filters)
 const originalPush = VueRouter.prototype.push
 const originalReplace = VueRouter.prototype.replace

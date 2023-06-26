@@ -136,7 +136,7 @@
     ```html
     <FormItemWrapper @change="handleMemberChange">
       <template #default="{ change, blur }">
-        <EeUser v-model="form.members" @change="change" @blur="blur" />
+        <BaseUser v-model="form.members" @change="change" @blur="blur" />
       </template>
     </FormItemWrapper>
     ```
@@ -156,7 +156,7 @@
     ```html
     <FormItemWrapper ref="memberRef ">
       <template #default="{ change, blur }">
-        <EeUser v-model="form.members" @change="change" @blur="blur" />
+        <BaseUser v-model="form.members" @change="change" @blur="blur" />
       </template>
     </FormItemWrapper>
     ```
@@ -175,7 +175,7 @@
     }
     ```
 
-## EePagination @Deprecated （使用 `ee-component` 中的 EePagination 替代，项目已经引入，可以直接使用）
+## 分页组件（*BasePagination*）
 
 分页组件
 
@@ -195,10 +195,10 @@
 - 使用示例
 
   ```js
-  <EePagination :total="total" page-size="pageSize" @size-change="handleSizeChange" />
+  <BasePagination :total="total" page-size="pageSize" @size-change="handleSizeChange" />
   ```
 
-## EeSelect
+## BaseSelect
 
 下拉框组件
 
@@ -232,7 +232,7 @@
 - 使用方法
   v-model 初始值为值数组，比如：['yaoyihuan', ...]
 
-## EeSimpleSelect
+## BaseSimpleSelect
 
 简单下拉框组件
 
@@ -257,7 +257,7 @@
 ## 代码示例
 
 ```html
-<EeSimpleSelect v-modal="sel" :options="options" :buttons="buttons" @button-click="handleButtonClick" />
+<BaseSimpleSelect v-modal="sel" :options="options" :buttons="buttons" @button-click="handleButtonClick" />
 ```
 
 ```javascript
@@ -295,7 +295,7 @@ methods: {
 }
 ```
 
-## EeUser
+## BaseUser
 
   人员组件
 

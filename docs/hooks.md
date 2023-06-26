@@ -44,7 +44,7 @@
 - 使用方法
 
   ```html
-  <EePagination
+  <BasePagination
     :current-page="page"
     :page-size="pageSize"
     @size-change="handleSizeChange"
@@ -56,7 +56,7 @@
 
   ```js
   import { usePagination } from '@/hooks/usePagination'
-  import EePagination from 'ee-component'
+  import BasePagination from '@/components/common/BasePagination.vue'
 
   const {
     page,                 // 当前页：ref 类型

@@ -1,5 +1,5 @@
 <template>
-  <EeSelect
+  <BaseSelect
     v-model="selected"
     class="project-plan-states"
     :width="60"
@@ -15,12 +15,12 @@
         <span>{{ state.label }}</span>
       </div>
     </template>
-  </EeSelect>
+  </BaseSelect>
 </template>
 
 <script setup>
 import { reactive, computed, watchEffect, ref } from 'vue'
-import EeSelect from '@/components/common/EeSelect.vue'
+import BaseSelect from '@/components/common/BaseSelect.vue'
 
 const props = defineProps({
   value: {
