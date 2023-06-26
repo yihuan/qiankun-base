@@ -14,7 +14,7 @@ function getSubAppsList(name, isMain) {
       subapp: subapp.key,
       isMain: isMain,
       component: () =>
-        import(/* webpackChunkName: "subentry" */ '@/views/HomeIwork.vue')
+        import(/* webpackChunkName: "subentry" */ '@/views/HomeWork.vue')
     })
   })
   return subApps
@@ -35,12 +35,12 @@ export const routes = [
         component: HomeWorkspace
       },
       {
-        name: 'HomeIwork',
-        path: SUB_APPS.IWORK.shortPath,
+        name: 'HomeWork',
+        path: SUB_APPS.WORK.shortPath,
         component: () =>
-          import(/* webpackChunkName: "subentry" */ '@/views/HomeIwork.vue')
+          import(/* webpackChunkName: "subentry" */ '@/views/HomeWork.vue')
       },
-    ].concat(getSubAppsList('HomeIworkSubapp', true))
+    ].concat(getSubAppsList('HomeWorkSubapp', true))
   },
   {
     path: '/demo',

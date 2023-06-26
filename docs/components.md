@@ -1,6 +1,6 @@
 # 项目中公用组件
 
-## SettingsIworkLayout
+## SettingsLayout
 
 设置项目系统页面布局组件（用于项目字段等）
 

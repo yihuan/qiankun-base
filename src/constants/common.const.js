@@ -2,8 +2,7 @@ const freeze = Object.freeze
 
 export const LOCAL_STORAGE_ITEM = freeze({
   DEPARTMENT: 'department',
-  BUSINESS_LINE: 'businessLine',
-  ICI_SG_APP: 'iciSwiftGoApp' // iCi 速行项目选中的app
+  BUSINESS_LINE: 'businessLine'
 })
 
 // EeSelect 下拉框值类型

@@ -4,47 +4,22 @@ import actions from '@/utils/actions.util'
 export const useAppStore = defineStore('app', {
   state: () => {
     return {
-      iwork: {
-        menuFilter: {
-          path: '',
-          crossBiz: '0',
-          viewType: '1'
-        }
-      },
-      ione: { orgName: '', bspId: '', orgId: '' },
-      ici: {
-        user: {
-          rightData: {}
-        },
-        applist: [],
-        newFlowWinOpen: false,
-        selectedApp: {}
-      },
+      oneApp: { orgName: '', orgId: '' },
       subappLoading: false
     }
   },
   actions: {
-    saveIworkMenuFilter(filter) {
-      this.iwork.menuFilter = filter
-    },
-    updateIoneInfo(options) {
-      this.ione = {
-        ...this.ione,
+    updateOneAppnfo(options) {
+      this.oneApp = {
+        ...this.oneApp,
         ...options
       }
       actions.setGlobalState({
-        ione: {
-          orgName: this.ione.orgName,
-          bspId: this.ione.bspId,
-          orgId: this.ione.orgId
+        oneApp: {
+          orgName: this.oneApp.orgName,
+          orgId: this.oneApp.orgId
         }
       })
-    },
-    updateIciInfo(options) {
-      this.ici = {
-        ...this.ici,
-        ...options
-      }
     }
   }
 })

@@ -102,10 +102,7 @@ const lifeCycles = {
     () => {
       store.subappLoading = false
       const subAppInstanceKey = [
-        '__QIANKUN_SUB_APP_IWORK__',
-        '__QIANKUN_SUB_APP_IONE__',
-        '__QIANKUN_SUB_APP_ICI__',
-        '__QIANKUN_SUB_APP_IEFFECT__'
+        '__QIANKUN_SUB_APP_WORK__',
       ]
       subAppInstanceKey.forEach((key) => {
         if (window.proxy[key] && process.env.NODE_ENV === 'development') {
@@ -117,8 +114,7 @@ const lifeCycles = {
 }
 
 action.initGlobalState({
-  user: { id: userStore.id, name: userStore.name },
-  ione: store.ione
+  user: { id: userStore.id, name: userStore.name }
 })
 
 registerMicroApps(microApps, lifeCycles)

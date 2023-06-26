@@ -1,4 +1,3 @@
-/**ici 相关接口 */
 import { getRequest, postBodyRequest } from '@/request/http'
 import urls from '@/request/urls'
 

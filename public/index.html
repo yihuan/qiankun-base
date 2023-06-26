@@ -11,9 +11,6 @@
     <% } %> <% for (let js of htmlWebpackPlugin.options.cdn.js) { %>
     <script src="<%=js%>"></script>
     <% } %>
-    <script>
-      function init(e){try{let t=e;const o="ee.58corp.com"===e;o?t+="/api-yunxiao-iwork2":t="ee-dev.58v5.cn/api-yunxiao-iwork2";const n=new XMLHttpRequest;n.open("get",window.location.protocol+"//"+t+"/wmda/getUserInfo"),n.withCredentials=!0,n.send(),n.onreadystatechange=function(){if(n.readyState==XMLHttpRequest.DONE&&200==n.status){const e=JSON.parse(n.responseText);o?initWmda(24270504957749,"ysha3ymn","24260459992880",e.data):initWmda(24270854990131,"ofii482d","24260459992880",e.data),loadWmda(t)}}}catch(e){console.error(e)}}function loadWmda(e){try{const t=new XMLHttpRequest;t.open("get",window.location.protocol+"//"+e+"/wmda/getVersion"),t.withCredentials=!0,t.send(),t.onreadystatechange=function(){if(t.readyState==XMLHttpRequest.DONE&&200==t.status){const e=t.responseText;if(e){const t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=JSON.parse(e).data;const o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}}}}catch(e){console.error(e)}}function initWmda(e,t,o,n){const a=n?.yunxiaoOrgBizDto,i=n?.allOrgName?.split("/")||[],s={0:"一级部门",1:"二级部门",2:"三级部门",3:"四级部门",4:"五级部门",5:"六级部门",6:"七级部门",7:"八级部门"},r=i.reduce(((e,t,o)=>(e.push({key:s[o],value:t}),e)),[]);window.WMDA_SDK_CONFIG={api_v:1,sdk_v:.1,mode:"report",appid:e,key:t,project_id:o,page_extra:[...r,{key:"业务线名称",value:a?.bizName||"业务线名称"},{key:"业务线ID",value:a?.orgId||"业务线ID"}],getUserId:function(){return n?.userName},SPA_HASH:!0}}init(location.host);
-    </script>
   </head>
   <body>
     <noscript>

@@ -12,14 +12,8 @@ axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
 const isProd = process.env.NODE_ENV === 'production'
 
 export const BASE_URL = isProd
-  ? window.location.origin + '/api-yunxiao-iwork2/'
-  : window.location.protocol + '//ee-dev.58v5.cn/api-yunxiao-iwork2/'
-export const ICI_API_URL = isProd
-  ? window.location.origin + '/api-yunxiao-ici/'
-  : 'https://ee.58v5.cn/api-yunxiao-ici/'
-export const IWOR1_API_URL = isProd
-  ? window.location.origin + '/api-yunxiao-iwork/'
-  : window.location.protocol + '//iwork.58v5.cn/'
+  ? window.location.origin + '/work.com/'
+  : window.location.protocol + '//work-dev.com/'
 
 axios.interceptors.request.use(
   function (config) {
@@ -116,11 +110,11 @@ axios.interceptors.response.use(
 
 function ssoRedirect() {
   const currentPath = document.location.href
-    .replace('#', 'iwork-well')
-    .replace('?', 'iwork-ques')
-    .replace(/=/g, 'iwork-eqs')
-    .replace(/&/g, 'iwork-and')
-    .replace('http', 'iwork-hp')
+    .replace('#', 'work-well')
+    .replace('?', 'work-ques')
+    .replace(/=/g, 'work-eqs')
+    .replace(/&/g, 'work-and')
+    .replace('http', 'work-hp')
   const redirectPage =
     BASE_URL + 'login/toL?fromUrl=' + encodeURIComponent(currentPath)
   location.href = redirectPage

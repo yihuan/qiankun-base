@@ -25,11 +25,11 @@ qiankun基座项目，通过 [`qiankun`](https://qiankun.umijs.org/zh/guide) 加
   // domain: 子应用域名
   // shortPath: 短路径名称
   export const SUB_APPS = freeze({
-    IWORK: freeze({
-      key: 'iwork',
+    WORK: freeze({
+      key: 'work',
       domain: isProd
-        ? `${origin}/fe-yunxiao-iwork2/`                // 远程环境配置
-        : 'http://lee.58v5.cn:5801/fe-yunxiao-iwork2/', // 本地配置
+        ? `${origin}/work/`                // 远程环境配置
+        : 'http://localdomain.com:8001/work/', // 本地配置
       shortPath: 'w'
     })
   }
@@ -40,16 +40,16 @@ qiankun基座项目，通过 [`qiankun`](https://qiankun.umijs.org/zh/guide) 加
   ```js
   // router/index.js
   {
-    name: 'HomeIwork',
-    path: SUB_APPS.IWORK.shortPath,
-    component: () => import('@/views/HomeIwork.vue')
+    name: 'HomeWork',
+    path: SUB_APPS.WORK.shortPath,
+    component: () => import('@/views/HomeWork.vue')
   }
   ```
 
   在需要插入子应用页面的地方引入 `SubAppEntry`
 
   ```html
-  // HomeIwork.vue
+  // HomeWork.vue
   <template>
     <SubAppEntry />
   </template>
@@ -66,8 +66,8 @@ qiankun基座项目，通过 [`qiankun`](https://qiankun.umijs.org/zh/guide) 加
 
 ```js
 export const BASE_URL = isProd
-  ? window.location.origin + '/api-yunxiao-iwork2/'                   // 线上
-  : window.location.protocol + '//ee-dev.58v5.cn/api-yunxiao-iwork2/' // 本地
+  ? window.location.origin + '/work/'                   // 线上
+  : window.location.protocol + '//localdomain.com/work/' // 本地
 ```
 
 ## 开发规范及示例文档
